@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<meta charset="utf-8">
+		<title>CME 161 Data Visualization</title>
+
+		<!-- site dependencies -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet"/>
+		<link href="assets/css/bootstrap-slider.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<link href="assets/css/d3tree.css" rel="stylesheet">
+		<link href="assets/css/cross.css" rel="stylesheet">
+		<link href="assets/css/dcjs.css" rel="stylesheet">
+	</head>
+<body>
+	<!-- begin wrap -->		
+	<div id="wrap">
+	  
+	  <!-- begin container -->
+		<div class="container">
+
+			<!-- begin content -->
+			<div id="content">
+
+				<!-- begin row -->
+				<div class="row">
+
+					<!-- begin header -->
+					<div class="col-xs-12 col-md-8">
+						<h1>Visualization Portfolio of Saurabh Datar</h1>
+						<h4><a href='http://web.stanford.edu/~dderiso/cme151/' target='_blank'>CME 161: Data Visualization</a> <small>Spring 2016</small></h4>
+						<hr>
+					</div>
+					<!-- end header -->
+
+					<!-- begin viz 1 -->
+					<div class="col-xs-12 col-md-12">
+						<h3>
+							Unicorns of the World - where and how big?
+						</h3>
+
+						<p>
+							This visualization tells the stories of the unicorn startups around the world, where they are based, and what are the top valued companies. It uses <a href="http://c3js.org/" target="_blank">C3.js</a> to build the charts. The source code for C3.js, which is a wrapper library over D3.js to generate quick charts, can be found <a href="https://github.com/c3js/c3">here</a>.
+						</p>
+
+						<hr>
+
+						<div id="c3-viz-wrapper">
+					    <div class="col-md-8">
+					      <div id="chart"></div>
+					    </div>
+					    
+					    <div class="col-md-4 pull-right">
+					      <h2>Unicorns of the World</h2>
+					      <hr>
+					      <p id="message"></p>
+					      <button id="start_btn" class="btn btn-primary pull-right">Start</button>
+					    </div>
+						</div>
+						
+						<hr>
+
+					</div>
+					<!-- end viz 1 -->
+
+					<hr>
+			
+
+					<!-- begin viz 2 -->
+					<div class="col-xs-12 col-md-12" id="d3-targ">
+						<h3>
+							The Targaryen Family Tree 
+						</h3>
+
+						<p>
+							This visualization shows the family tree of the Targaryens, a powerful family from Game of Thrones. Game of Thrones is a hugely popular show adapted from <em>A Song of Ice and Fire</em>, a fantasy novel series written by George RR Martin. The show is full of complex families, and this visualization helps keep track of who belongs to which family. Especially with this <a href="https://en.wikipedia.org/wiki/R%2BL%3DJ_Theory" target="_blank">[SPOILER ALERT]</a> theory. The library used is <a href="https://d3js.org/" target="_blank">D3.js</a>.
+						</p>
+
+						<hr>
+						
+						<div id="targ">
+							<div id="hierarchy"></div>
+						</div>
+						
+						<hr>
+
+					</div>
+					<!-- end viz 2 -->
+
+					<!-- begin viz 3 -->
+					<div class="col-xs-12 col-md-12">
+						<h3>
+							Baseball statistics using Crossfilter
+						</h3>
+
+						<p>
+							This visualization uses <a href="http://www.seanlahman.com/baseball-archive/statistics/" target="_blank"> Sean Lahmann's baseball dataset</a> to explore the all-star games appearances of baseball players between 1870 and 1905. We use the <a href="http://square.github.io/crossfilter/" target="_blank">Crossfilter</a> library to compute results according to different filters applied.
+						</p>
+
+						<hr>
+						
+						<div id="baseball-wrap">
+							<div class="well">
+							  Filter # of Games Played:&nbsp&nbsp <b>10</b>
+							  <input id="n_games_slider" type="text" /> <b>1000</b>
+							</div>
+
+							<div class="well">
+							  # of Games Played Range:&nbsp&nbsp <span id="n_games_slider_txt"></span>
+							</div>
+
+							<div class="well">
+							  Filter Years:&nbsp&nbsp <b>1872  </b>
+							  <input id="year_slider" type="text" /> <b>  1905</b>
+							</div>
+
+							<div class="well">
+							  # of Years Played Range:&nbsp&nbsp <span id="year_slider_txt"></span>
+							</div>
+
+							<!-- PLAYER FILTER -->
+							<div id="player-filter" class="well">
+							  <p>Choose a player</p> 
+							</div>
+
+						<!-- 	<button id="player-button">Submit</button>
+							<button id="player-reset">Reset</button> -->
+
+							<!-- TEAM FILTER -->
+							<div id="team-filter" class="well">
+							  <p>Choose a team</p> 
+							</div>
+
+							<!-- <button id="team-button">Submit</button>
+							<button id="team-reset">Reset</button> -->
+													
+						</div>
+						
+						<hr>
+
+					</div>
+					<!-- end viz 3 -->
+
+					<!-- begin viz 4 -->
+					<div class="col-xs-12 col-md-12">
+						<h3>
+							Petals and Sepals and how they are related
+						</h3>
+
+						<p>
+							This visualization uses Fisher's Iris data set to show the relationships between sepals and petals in flowers. It allows you to explore different aspects (length, width) simultaneously, using <a href="https://dc-js.github.io/dc.js/"" target="_blank">DC.js</a>
+						</p>
+						<hr>
+						
+						<div id="flower">
+							<div id="resetButton"> </div>
+
+							<div style="float:left;">
+							  <h3>Sepal Length</h3>
+							  <div id="sepal_length_chart"></div>
+							</div>
+
+							<div style="float:left;">
+							  <h3>Species</h3>
+							  <div id="species_chart"></div>
+							</div>
+
+							<div style="float:left;">
+							  <h3>Sepal width vs Petal width</h3>
+							  <div id="sepal_scatter_chart"></div>
+							</div>
+
+							<div style="float:left;">
+							  <h3>Sepal width</h3>
+							  <div id="sepal_width_chart"></div>
+							</div>
+
+							<div style="float:left;">
+							  <h3>Petal Length</h3>
+							  <div id="petal_length_chart"></div>
+							</div>
+
+							<div style="float:left;">
+							  <h3>Petal Width</h3>
+							  <div id="petal_width_chart"></div>
+							</div>
+
+						</div>
+						
+						<hr>
+
+					</div>
+					<!-- end viz 4 -->
+
+				</div>
+				<!-- end row -->
+
+			</div> 
+			<!-- end content -->
+
+		</div>
+		<!-- end container -->
+
+	</div>
+	<!-- end wrap -->	
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.7/crossfilter.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.1/dc.js'></script>
+  <script src='https://rawgit.com/dc-js/dc.js/develop/dc.js'></script>
+  <script src='assets/js/bootstrapslider/bootstrap-slider.js'></script> 
+
+	<script src='assets/js/c3_unicorns/c3_unicorns.js'></script>
+	<script src='assets/js/d3_tree/d3_tree.js'></script>
+	<script src='assets/js/crossfilter_baseball/crossfilter_bball.js'></script>
+	<script src='assets/js/dcjs_species/dcjs_species.js'></script> 
+
+	<!-- begin footer -->
+	<div id="footer">
+	  <div class="container">
+			<p class="text-muted credit"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="assets/images/cc_80x15.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">This Portfolio</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://web.stanford.edu/~dderiso/cme151/" property="cc:attributionName" rel="cc:attributionURL">Saurabh Datar</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/dderiso/stanford_data_viz_course" rel="dct:source">https://github.com/dderiso/stanford_data_viz_course</a>.</p>
+	  </div>
+	</div>
+	<!-- end footer -->   
+
+
+</body>
+</html>

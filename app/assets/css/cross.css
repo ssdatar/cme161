@@ -1,0 +1,36 @@
+body {
+  font: 10px sans-serif;
+}
+
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: #fff;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.well {
+  margin: 1em;
+}
+
+.chart-title {
+  margin-left: 10px;
+  color: #545454;
+}
+
+#player-filter, #team-filter {
+  margin-bottom: 1em;
+}
+
+/*button {
+  margin-top: 1em;
+}*/
